@@ -1,7 +1,12 @@
 openwisp library frontend
-===================
+=========================
 
-OpenWISP 2 library frontend module (built using reactjs).
+OpenWISP template library frontend module (built using reactjs).
+
+This Frontend is used to interract with the openwisp `library backend
+<https://github.com/openwisp/openwisp-template-library-backend>`_. It provides an interface to
+list and search for public templates and to create public templates and view their
+details.
 
 **Want to help OpenWISP?** `Find out how to help us grow here
 <http://openwisp.io/docs/general/help-us.html>`_.
@@ -17,80 +22,51 @@ OpenWISP 2 library frontend module (built using reactjs).
 Dependencies
 ------------
 
-*Node >= 8.10
-
-Settings
---------
-Edit the config.json file found in the src directory.
-
-``BACKEND_DOMAIN``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+--------------+--------------------------------------------------------------------+
-| **type**:    | ``string``                                                         |
-+--------------+--------------------------------------------------------------------+
-| **default**: | .. code-block:: node_js                                            |
-|              |                                                                    |
-|              |   "http://localhost:8000/"                                         |
-+--------------+--------------------------------------------------------------------+
-
-``FACEBOOK_APP_ID``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+--------------+--------------------------------------------------------------------+
-| **type**:    | ``string``                                                         |
-+--------------+--------------------------------------------------------------------+
-| **default**: | .. code-block:: node_js                                            |
-|              |                                                                    |
-|              |   ""                                                               |
-+--------------+--------------------------------------------------------------------+
-
-``FACEBOOK_APP_ID``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+--------------+--------------------------------------------------------------------+
-| **type**:    | ``string``                                                         |
-+--------------+--------------------------------------------------------------------+
-| **default**: | .. code-block:: node_js                                            |
-|              |                                                                    |
-|              |   ""                                                               |
-+--------------+--------------------------------------------------------------------+
+* Node >= 8.10
 
 
 Installation
 ------------
-In the project directory, you can run:
+Make sure nodejs and npm are installed, then
+fork and clone this repository to your local machine then move into
+the project root directory.
+
+Install the dependencies:
 
 .. code-block:: shell
+
     npm install
 
-to install all required dependencies
+Run tests
 
 .. code-block:: shell
+
     npm test
 
-to run the test
+Start server
 
-.. code-block::shell
+.. code-block:: shell
+
     npm start
 
-to run the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser
+This should start the server on http://localhost:3000/
+with the backend running on http://localhost:8000/ .  You can refer to the
+`library backend <https://github.com/openwisp/openwisp-template-library-backend>`_ for installation of the
+library backend.
 
-.. code-block::shell
+Deployment
+----------
+In case you wish to deploy this app to a server, then you need to edit the ``config.json``
+file found in the ``src/`` directory to add your
+``FACEBOOK_APP_ID`` and ``GOOGLE_CLIENT_ID`` for social logins and the domain on which your backend is running to
+``BACKEND_DOMAIN``. remember to append the last ``/`` to the ``BACKEND_DOMAIN``.
+
+If the method which you using to deploy this app needs the ``build``, then you can get the build by running
+the following command from the project root directory;
+
+.. code-block:: shell
+
     npm run build
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-
-.. coce-block::shell
-    npm run eject
-
-to remove the single build dependency from the project
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 
 Contributing
