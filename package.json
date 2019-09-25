@@ -2,6 +2,11 @@
   "name": "library-frontend",
   "version": "0.1.0",
   "private": true,
+  "license": "GPL-3",
+  "author": {
+    "name": "Noumbissi Valere Gille Geovan",
+    "email": "noumbissivalere@gmail.com"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "enzyme": "^3.10.0",
@@ -12,6 +17,7 @@
     "react-dom": "^16.8.6",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.0.5",
+    "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-test-renderer": "^16.9.0",

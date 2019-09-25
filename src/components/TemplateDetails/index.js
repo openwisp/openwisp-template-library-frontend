@@ -32,6 +32,7 @@ class TemplateDetails extends Component {
         const url = json.url.substring(0, cutOffIndex);
         this.getSubscriptions(url);
         this.setState({ data: json });
+        console.log(json);
       });
   }
   getSubscriptions = url => {
@@ -50,9 +51,7 @@ class TemplateDetails extends Component {
       })
       .then(json => this.setState({ subscription_count: json.count }));
     fetch(
-      `${url}subscription/?template=${
-        this.props.match.params.id
-      }&&status=False`,
+      `${url}subscription/?template=${this.props.match.params.id}&&status=False`,
       {
         mode: "cors",
         method: "GET"
