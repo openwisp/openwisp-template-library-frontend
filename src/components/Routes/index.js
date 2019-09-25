@@ -10,6 +10,7 @@ import ChangePassword from "../ChangePassword";
 import UserDetails from "../UserDetails";
 import CreateTemplate from "../CreateTemplate";
 import ListTemplate from "../ListTemplate";
+import Register from "../Register";
 import NotFound from "../NotFound";
 
 const Routes = () => {
@@ -21,6 +22,7 @@ const Routes = () => {
         <Route exact path="/login" component={Login} />
         <Route exact path="/logout" component={Logout} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/register" component={Register} />
         <Route exact path="/user" component={UserDetails} />
         <Route exact path="/forget-password" component={ForgotPassword} />
         <Route exact path="/change-password" component={ChangePassword} />

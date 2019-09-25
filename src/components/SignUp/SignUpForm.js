@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
 import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import "../../index.css";
 
@@ -23,7 +22,7 @@ const SignUpForm = props => {
   return (
     <div>
       <div className="container">
-        <h1>SignUp</h1>
+        <br />
         <hr />
         <Formik
           validationSchema={schema}
@@ -52,9 +51,6 @@ const SignUpForm = props => {
               </p>
               <p className="text-success">
                 {props.success ? props.success : null}
-              </p>
-              <p className="text-right">
-                Have an account? <Link to="/login">login</Link>
               </p>
               <Form.Group controlId="username">
                 <Form.Label>Username:</Form.Label>

@@ -7,13 +7,12 @@ class Logout extends Component {
   constructor() {
     super();
     this.state = {
-      user: localStorage.getItem("user")
+      key: localStorage.getItem("token")
     };
     this.handleLogout = this.handleLogout.bind(this);
   }
   handleLogout = () => {
-    const user = localStorage.getItem("user");
-    if (user) {
+    if (this.state.key) {
       fetch(`${config.BACKEND_DOMAIN}rest-auth/logout/`, {
         method: "POST",
         mode: "cors",
@@ -25,7 +24,7 @@ class Logout extends Component {
         .then(() => {
           localStorage.removeItem("user");
           localStorage.removeItem("token");
-          this.setState({ user: null });
+          this.setState({ key: null });
         });
     }
   };
@@ -33,7 +32,7 @@ class Logout extends Component {
     return (
       <div>
         {this.handleLogout()}
-        {this.state.user ? null : <Redirect to="/" />}
+        {this.state.key ? null : <Redirect to="/" />}
       </div>
     );
   }
