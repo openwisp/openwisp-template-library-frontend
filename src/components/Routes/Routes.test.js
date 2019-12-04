@@ -5,6 +5,7 @@ import TemplateDetails from "../TemplateDetails";
 import Login from "../Login";
 import Logout from "../Logout";
 import SignUp from "../SignUp";
+import Register from "../Register";
 import ForgotPassword from "../ForgotPassword";
 import ChangePassword from "../ChangePassword";
 import UserDetails from "../UserDetails";
@@ -36,16 +37,12 @@ describe("routes using memory router", () => {
     expect(pathMap["/template/:id"]).toBe(TemplateDetails);
   });
 
-  it("/login should route to Login", () => {
-    expect(pathMap["/login"]).toBe(Login);
-  });
-
   it("/logout should route to Logout", () => {
     expect(pathMap["/logout"]).toBe(Logout);
   });
 
-  it("/signup should route to SignUp", () => {
-    expect(pathMap["/signup"]).toBe(SignUp);
+  it("/register should route to Register", () => {
+    expect(pathMap["/register"]).toBe(Register);
   });
 
   it("/forget-password should route to ForgotPassword", () => {

@@ -17,8 +17,6 @@ const LoginForm = props => {
   return (
     <div>
       <div className="container">
-        <h1>Login</h1>
-        <hr />
         <Card style={{ width: "30rem" }} className="mx-auto">
           <br />
           <div className="social">
@@ -61,9 +59,6 @@ const LoginForm = props => {
                 <div className="input">
                   <p className="text-danger">
                     {props.error ? props.error.non_field_errors : null}
-                  </p>
-                  <p className="text-right">
-                    Create an <Link to="/signup">account</Link>?
                   </p>
                   <Form.Group controlId="username">
                     <Form.Label>Username:</Form.Label>
