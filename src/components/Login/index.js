@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import Header from "../Header";
-import Footer from "../Footer";
 import LoginForm from "./Login";
 import PropTypes from "prop-types";
 import config from "../../config.json";
@@ -102,16 +100,12 @@ class Login extends Component {
 
   render() {
     return (
-      <main>
-        <Header />
         <LoginForm
           googleResponse={this.googleResponse}
           facebookResponse={this.facebookResponse}
           handleSubmit={this.handleSubmit}
           error={this.state.error}
         />
-        <Footer />
-      </main>
     );
   }
 }

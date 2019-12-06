@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Header from "../Header";
-import Footer from "../Footer";
 import SignUpForm from "./SignUpForm";
 import config from "../../config.json";
 
@@ -12,7 +10,7 @@ class SignUp extends Component {
       success: null
     };
   }
-  handleSubmit = values => {
+  handleSubmit = values => {  
     const data = {
       username: values.username,
       email: values.email,
@@ -38,15 +36,11 @@ class SignUp extends Component {
   };
   render() {
     return (
-      <div>
-        <Header />
         <SignUpForm
           handleSubmit={this.handleSubmit}
           error={this.state.error}
           success={this.state.success}
         />
-        <Footer />
-      </div>
     );
   }
 }

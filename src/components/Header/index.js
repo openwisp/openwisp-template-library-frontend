@@ -31,17 +31,19 @@ const Header = () => {
                   Create Template
                 </Nav.Link>
               ) : null}
+              {user ? (
+                <Nav.Link
+                  href="/user"
+                  className="hover text-white"
+                >
+                  {user}
+                </Nav.Link>
+              ) : null}
               <Nav.Link
-                href={user ? "/user" : "/login"}
+                href={user ? "/logout" : "/register"}
                 className="hover text-white"
               >
-                {user ? user : "Login"}
-              </Nav.Link>
-              <Nav.Link
-                href={user ? "/logout" : "/signup"}
-                className="hover text-white"
-              >
-                {user ? "Logout" : "Signup"}
+                {user ? "Logout" : "Register"}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
